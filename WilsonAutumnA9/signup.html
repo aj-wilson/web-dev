@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Murfreesboro Regional Soccer League - Sign Up</title>
+      <!--
+         Murfreesboro Regional Soccer League Sign Up page
+         Filename: signup.html
+      
+         Author: Autumn Wilson
+         Date: 11/12/2017
+         HTML5 and CSS3 Illustrated Unit J, Independent Challenge 2
+      -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <script src="modernizr.custom.40753.js"></script>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" sizes="192x192" href="images/android.png">
+   </head>
+   <body>
+      <div class="container">
+         <p class="skipnavigation"><a href="#contentstart">Skip navigation</a></p> 
+         <header>
+            <h1>Murfreesboro Regional Soccer League</h1>
+            <div>
+               <a href="index.html"><img src="images/mrsl.png" width="224" height="105" alt=""></a>
+            </div>
+         </header>
+         <nav class="sitenavigation">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="started.html">Getting Started</a></li>
+               <li><a href="schedule.html">Schedules</a></li>
+               <li><a href="https://goo.gl/maps/2z1wg" target="_blank">Field Location</a></li>
+            </ul>
+         </nav>
+         <article id="contentstart">
+            <h2>Sign Up</h2>
+            <form action="results.html">
+            	<fieldset class="contactinfo">
+            		<legend>Contact Information</legend>
+            		<label for="fnameinput">
+            			First Name
+            			<input type="text" name="fname" id="fnameinput" placeholder="First name">
+            		</label>
+            		<label for="lnameinput">
+            			Last Name
+            			<input type="text" name="lname" id="lnameinput" placeholder="Last name">
+            		</label>
+            		<label for="emailinput">
+            			Email
+            			<input type="email" name="email" id="emailinput" placeholder="address@example.com">
+            		</label>
+            		<label for="phoneinput">
+            			Phone
+            			<input type="tel" name="phone" id="phoneinput">
+            		</label>
+            	</fieldset>
+            	<fieldset class="ageinfo">
+            		<legend>Age Range</legend>
+            		<select id="agerange"
+            		name="agerange">
+            			<option value="D1">4-6</option>
+            			<option value="D2">7-9</option>
+            			<option value="D3">10-12</option>
+            			<option value="D4">13-15</option>
+            			<option value="D5">16-17</option>
+            			<option value="D6">18-35</option>
+            			<option value="D7">36-54</option>
+            			<option value="D8">55+</option>
+            		</select>
+            	</fieldset>
+            	<fieldset class="membershipinfo">
+            		<legend>Special Memberships</legend>
+            		<label for="student">
+            			<input type="checkbox" name="memberships" id="student" value="Student" checked>
+            			Student
+            		</label>
+            		<label for="senior">
+            			<input type="checkbox" name="memberships" id="senior" value="Senior">
+            			Senior
+            		</label>
+            	</fieldset>
+            	<fieldset class="additionalinfo">
+            		<legend>Additional Information</legend>
+            		<label for="feedback">
+            			Questions or special requests
+            			<textarea name="feedback" id="feedback" rows="7">
+            			</textarea>
+            		</label>
+            	</fieldset>
+            	<fieldset class="submitbutton">
+            		<input type="submit" id="submit" value="Submit">
+            	</fieldset>
+            </form>
+         </article>
+         <footer>
+            <p>c/o Davies Sporting Goods</p>
+            <p>418 N. Sartoris St.</p>
+            <p>Murfreesboro, TN 37130</p>
+            <p>(615) 555-2255</p>
+         </footer>
+      </div>
+   </body>
+</html>

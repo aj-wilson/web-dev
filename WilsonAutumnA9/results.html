@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Murfreesboro Regional Soccer League - Results</title>
+      <!--
+         Murfreesboro Regional Soccer League Results page
+         Filename: started.html
+      
+         Author: Autumn Wilson
+         Date: 11/12/2017
+         HTML5 and CSS3 Illustrated Unit J, Independent Challenge 2
+      -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <script src="modernizr.custom.40753.js"></script>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" sizes="192x192" href="images/android.png">
+   </head>
+   <body>
+      <div class="container">
+         <p class="skipnavigation"><a href="#contentstart">Skip navigation</a></p> 
+         <header>
+            <h1>Murfreesboro Regional Soccer League</h1>
+            <div>
+               <a href="index.html"><img src="images/mrsl.png" width="224" height="105" alt=""></a>
+            </div>
+         </header>
+         <nav class="sitenavigation">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="started.html">Getting Started</a></li>
+               <li><a href="schedule.html">Schedules</a></li>
+               <li><a href="https://goo.gl/maps/2z1wg" target="_blank">Field Location</a></li>
+            </ul>
+         </nav>
+         <article id="contentstart">
+            <h2>Your form has been submitted</h2>
+               <h3>You entered the following data:</h3>
+         
+               <script>
+                   var formData = location.search;
+                   formData = formData.substring(1, formData.length);
+                   while (formData.indexOf("+") !== -1) {
+                      formData = formData.replace("+", " ");
+                   }
+                   formData = decodeURIComponent(formData);
+                   var formArray = formData.split("&");
+                   for (var i = 0; i < formArray.length; i = i + 1) {
+                      document.write("<p>" + formArray[i] + "</p>");
+                   }
+               </script>
+         </article>
+         <footer>
+            <p>c/o Davies Sporting Goods</p>
+            <p>418 N. Sartoris St.</p>
+            <p>Murfreesboro, TN 37130</p>
+            <p>(615) 555-2255</p>
+         </footer>
+      </div>
+   </body>
+</html>
