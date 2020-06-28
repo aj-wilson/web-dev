@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="main.css" type="text/css">
+		<script src="main.js"></script>
+		<title>Financial Calculator</title>
+	</head>
+	<body>		
+		<form name="fincalc">
+			<fieldset>
+				<legend>FINANCIAL CALCULATOR - INSTRUCTIONS</legend>
+				Enter the loan type and amount, then change the yearly interest rate in percentage (e.g., 8.5%
+				 = 8.5) and select the length of your loan in years. Click the "Calculate Monthly Payments" button 
+				 to view the monthly payment and total payments. Click the "Reload" button to clear the form.
+				   For personal and business loans there will be a $1000.00 and $500.00 origination fees that will
+				    be included in monthly payments. There is no origination fees for education loans.
+			</fieldset>
+			<fieldset>
+				<legend>TYPE OF LOAN</legend>
+				<label for="Personal ($1000.00 origination fee)">
+					<input type="radio" name="LoanType" id="Personal"
+					value="Personal ($1000.00 origination fee)" checked>
+					Personal ($1000.00 origination fee)
+				</label>
+				<label for="Business ($500.00origination fee)">
+					<input type="radio" name="LoanType" id="Business"
+					value="Business ($500.00origination fee)">
+					Business ($500.00origination fee)
+				</label>
+				<label for="Education">
+					<input type="radio" name="LoanType" id="Education"
+					value="Education">
+					Education
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>LOAN AMOUNT</legend>
+				<label for="LoanAmountInput">
+            		Loan Amount
+            		<input type="text" name="LoanAmount" id="LoanAmountInput" placeholder="40000">
+            	</label>
+			</fieldset>
+			<fieldset>
+				<legend>YEARLY INTEREST RATE</legend>
+				<label for="InterestRateInput">
+            		Interest Amount IN Decimal (e.g., 8.5% = 8.5)
+            		<input type="text" name="Interest Rate" id="InterestRateInput" value="7.5">
+            	</label>
+			</fieldset>
+			<fieldset class="LoanYearInfo">
+            	<legend>LENGTH OF LOAN (YEARS)</legend>
+            	<select id="LoanLength"
+            	name="LoanLength">
+            		<option value="5" selected>5</option>
+            		<option value="10">10</option>
+            		<option value="15">15</option>
+            		<option value="20">20</option>
+            		<option value="25">25</option>
+            		<option value="30">30</option>
+            	</select>
+            </fieldset>
+            <fieldset>
+            	<legend>FULL TIME STUDENT</legend>
+            		<label for="Student">
+            			<input type="checkbox" name="FullTimeStudent" id="Student" value="Student">
+            			(get 1% rate discount)
+            		</label>
+            </fieldset>
+            <fieldset class="submitbutton">
+            	<input type="button" id="MonthlyPaymentsButton" value="Calculate Monthly Payments"
+            	 onclick="showVal()"/>
+            	<input type="button" id="ReloadButton" value="Reload" onclick="reloadMethod()">
+            </fieldset>
+            <fieldset>
+            	<label for="MonthlyPaymentsOutput">
+            		Monthly Payment Amount $
+            		<input type="text" name="MonthlyPayments" id="MonthlyPaymentsOutput" onclick="showVal()">
+            	</label>
+            	<label for="TotalPaymentsOutput">
+            		Total Payment Amount $
+            		<input type="text" name="TotalPayments" id="TotalPaymentsOutput" onclick="showVal()">
+            	</label>
+            </fieldset>
+		</form>
+	</body>
